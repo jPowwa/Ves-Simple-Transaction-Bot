@@ -49,7 +49,8 @@ for (const file of commandFiles) {
 })();
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+	console.log(`Logged in as ${client.user.tag}!`);
+	client.user.setPresence({ activities: [{ name: "with Ves' Simple Transaction Bot" }] });
 });
 
 client.on(Events.InteractionCreate, async interaction => {
